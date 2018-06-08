@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-//import Menu from './Menu';
 import { ThemeProvider } from 'styled-components';
 import colors from '../utils/colors';
 import '../App.css';
 import Home from './Home';
+import Menu from './Menu';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <div className="App">
-              {/* <Menu /> */}
+              <Menu />
+              <Footer />
               <Route exact path="/" component={Home} />
             </div>
           </Switch>

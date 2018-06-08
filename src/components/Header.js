@@ -47,7 +47,6 @@ const Container = styled.div`
 
 const Name = styled.h1`
   margin-left: 4rem;
-
   @media screen and (max-width: 600px) {
     margin-left: 0;
   }
