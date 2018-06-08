@@ -78,7 +78,11 @@ const Logo = styled.img`
   }
 `;
 
-const TextContainer = styled.div``;
+const TextContainer = styled.div`
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+`;
 
 const Image = styled.img`
   height: 175px;
