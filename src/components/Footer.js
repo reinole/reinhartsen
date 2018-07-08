@@ -17,7 +17,7 @@ const FooterContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: red;
+  background-color: orange;
 `;
 
 const ExternalLink = styled.a``;
