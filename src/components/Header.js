@@ -15,7 +15,7 @@ export default class Header extends Component {
           </TextContainer>
         </UpperContainer>
         <ProfessionContainer>
-          <Profession>Front-end developer at </Profession>
+          <Profession>Web developer at </Profession>
           <Logo src={CompanyLogo} />
         </ProfessionContainer>
       </Container>
