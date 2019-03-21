@@ -15,7 +15,7 @@ export default class Header extends Component {
           </TextContainer>
         </UpperContainer>
         <ProfessionContainer>
-          <Profession>Front-end developer at </Profession>
+          <Profession>Web developer at </Profession>
           <Logo src={CompanyLogo} />
         </ProfessionContainer>
       </Container>
@@ -47,7 +47,6 @@ const Container = styled.div`
 
 const Name = styled.h1`
   margin-left: 4rem;
-
   @media screen and (max-width: 600px) {
     margin-left: 0;
   }
@@ -78,7 +77,11 @@ const Logo = styled.img`
   }
 `;
 
-const TextContainer = styled.div``;
+const TextContainer = styled.div`
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+`;
 
 const Image = styled.img`
   height: 175px;
