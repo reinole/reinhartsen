@@ -2,25 +2,34 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import ProfileImage from '../utils/images/Ole-christian-ludens.jpg';
 import CompanyLogo from '../utils/images/ludensLogo.png';
+import useSanityFetch from '../hooks/sanityFetch';
 
-export default class Header extends Component {
-  render() {
-    return (
-      <Container>
-        <UpperContainer>
-          <Image src={ProfileImage} />
-          <TextContainer>
-            <Name>Ole Christian </Name>
-            <Name>Reinhartsen</Name>
-          </TextContainer>
-        </UpperContainer>
-        <ProfessionContainer>
-          <Profession>Web developer at </Profession>
-          <Logo src={CompanyLogo} />
-        </ProfessionContainer>
-      </Container>
-    );
-  }
+export default function Header() {
+  const query = `*[_type == "post" ]`;
+
+  const [busy, data, error] = useSanityFetch({
+    query,
+    fetchOnMount: true,
+    initialValue: []
+  });
+
+  console.log({ busy, data, error });
+
+  return (
+    <Container>
+      <UpperContainer>
+        <Image src={ProfileImage} />
+        <TextContainer>
+          <Name>Ole Christian </Name>
+          <Name>Reinhartsen</Name>
+        </TextContainer>
+      </UpperContainer>
+      <ProfessionContainer>
+        <Profession>Web developer at </Profession>
+        <Logo src={CompanyLogo} />
+      </ProfessionContainer>
+    </Container>
+  );
 }
 
 const UpperContainer = styled.div`

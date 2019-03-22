@@ -5,7 +5,7 @@ const Marginer = styled.div`
   margin: 0 30rem 0 30rem;
 `;
 
-export default class Margin extends Component {
+export default function Margin()  {
   state = {};
 
   render() {}

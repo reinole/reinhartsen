@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export default class Menu extends Component {
-  render() {
-    return (
-      <MenuContainer>
-        <MenuItem href="/">Reinhartsen</MenuItem>
-        <MenuItem href="#">MenuItem</MenuItem>
-      </MenuContainer>
-    );
-  }
+export default function Menu() {
+  return (
+    <MenuContainer>
+      <MenuItem href="/">Reinhartsen</MenuItem>
+      <MenuItem href="#">MenuItem</MenuItem>
+    </MenuContainer>
+  );
 }
 
 const MenuContainer = styled.div`
@@ -29,9 +27,9 @@ const MenuItem = styled.a`
   border: 1px solid black;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  transition: box-shadow 0.1s ease-in;
+  transition: box-shadow 0.1s linear;
 
   &:hover {
-    box-shadow: 1px 2px 3px 0px rgba(161, 146, 161, 1);
+    box-shadow: 0 2px 7px 0px rgba(161, 146, 161, 1);
   }
 `;

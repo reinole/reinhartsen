@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export default class Footer extends Component {
-  render() {
-    return (
-      <FooterContainer>
-        <ExternalLink href="https://github.com/reinole">Github</ExternalLink>
-      </FooterContainer>
-    );
-  }
+export default function Footer() {
+  return (
+    <FooterContainer>
+      <ExternalLink href="https://github.com/reinole">Github</ExternalLink>
+    </FooterContainer>
+  );
 }
 
 const FooterContainer = styled.div`
